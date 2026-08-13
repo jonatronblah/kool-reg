@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "acme",
-  "homepage": "https://acme.com",
+  "name": "disc-image",
+  "homepage": "https://disc-img.com",
   "items": [
     {
       "name": "hello-world",
@@ -57,6 +57,24 @@
         {
           "path": "registry/new-york/blocks/complex-component/hooks/use-pokemon.ts",
           "type": "registry:hook"
+        }
+      ]
+    },
+    {
+      "name": "cube",
+      "type": "registry:component",
+      "title": "Cube",
+      "description": "A rotating 3D cube built with React Three Fiber v10 and drei v11.",
+      "dependencies": [
+        "three@>=0.185.0",
+        "@react-three/fiber@10.0.0-alpha.3",
+        "@react-three/drei@11.0.0-alpha.5"
+      ],
+      "devDependencies": ["@types/three@>=0.185"],
+      "files": [
+        {
+          "path": "registry/scenes/cube/cube.tsx",
+          "type": "registry:component"
         }
       ]
     },

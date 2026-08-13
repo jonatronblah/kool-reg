@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cube",
+  "title": "Cube",
+  "description": "A rotating 3D cube built with React Three Fiber v10 and drei v11.",
+  "dependencies": [
+    "three@>=0.185.0",
+    "@react-three/fiber@10.0.0-alpha.3",
+    "@react-three/drei@11.0.0-alpha.5"
+  ],
+  "devDependencies": [
+    "@types/three@>=0.185"
+  ],
+  "files": [
+    {
+      "path": "registry/scenes/cube/cube.tsx",
+      "content": "\"use client\"\n\nimport { useRef } from \"react\"\nimport * as THREE from \"three\"\nimport { Canvas, useFrame, type ThreeElements } from \"@react-three/fiber\"\nimport { OrbitControls } from \"@react-three/drei\"\nimport { cn } from \"@/lib/utils\"\n\nfunction SpinningCube(props: ThreeElements[\"mesh\"]) {\n  const meshRef = useRef<THREE.Mesh>(null!)\n\n  useFrame((_, delta) => {\n    meshRef.current.rotation.x += delta\n    meshRef.current.rotation.y += delta * 0.5\n  })\n\n  return (\n    <mesh {...props} ref={meshRef}>\n      <boxGeometry args={[1, 1, 1]} />\n      <meshStandardMaterial color=\"orange\" />\n    </mesh>\n  )\n}\n\nexport function Cube({ className }: { className?: string }) {\n  return (\n    <div className={cn(\"h-[400px] w-full bg-muted\", className)}>\n      <Canvas>\n        <ambientLight intensity={Math.PI / 2} />\n        <pointLight position={[10, 10, 10]} decay={0} intensity={Math.PI} />\n        <pointLight position={[-10, -10, -10]} decay={0} intensity={Math.PI} />\n        <SpinningCube />\n        <OrbitControls />\n      </Canvas>\n    </div>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}
