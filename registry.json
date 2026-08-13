@@ -79,6 +79,18 @@
       ]
     },
     {
+      "name": "sketch-star",
+      "type": "registry:ui",
+      "title": "Sketch Star",
+      "description": "A hand-drawn star icon generated from SVG source.",
+      "files": [
+        {
+          "path": "registry/icons/SketchStar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "example-with-css",
       "type": "registry:component",
       "title": "Example with CSS",

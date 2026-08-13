@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sketch-star",
+  "type": "registry:ui",
+  "title": "Sketch Star",
+  "description": "A hand-drawn star icon generated from SVG source.",
+  "files": [
+    {
+      "path": "registry/icons/SketchStar.tsx",
+      "content": "import type { SVGProps } from \"react\";\nconst SvgSketchStar = (props: SVGProps<SVGSVGElement>) => (\n  <svg\n    xmlns=\"http://www.w3.org/2000/svg\"\n    width=\"1em\"\n    height=\"1em\"\n    fill=\"none\"\n    stroke=\"currentColor\"\n    strokeLinecap=\"round\"\n    strokeLinejoin=\"round\"\n    strokeWidth={2}\n    viewBox=\"0 0 24 24\"\n    {...props}\n  >\n    <path d=\"m12 3.5 2.6 6.1 6.6.5-5 4.2 1.6 6.4-5.8-3.5-5.8 3.5 1.6-6.4-5-4.2 6.6-.5Z\" />\n  </svg>\n);\nexport default SvgSketchStar;\n",
+      "type": "registry:ui"
+    }
+  ]
+}

@@ -5,6 +5,7 @@ import { ExampleForm } from "@/registry/new-york/blocks/example-form/example-for
 import PokemonPage from "@/registry/new-york/blocks/complex-component/page"
 import { ExampleCard } from "@/registry/new-york/blocks/example-with-css/example-card"
 import { CubePreview } from "@/components/cube-preview"
+import SketchStar from "@/registry/icons/SketchStar"
 // This page displays items from the custom registry.
 // You are free to implement this with your own design as needed.
 
@@ -19,6 +20,20 @@ export default function Home() {
       </header>
       <main className="flex flex-col flex-1 gap-8">
         <CubePreview />
+        <div className="flex flex-col gap-4 border rounded-lg p-4">
+          <div className="flex items-center justify-between">
+            <h2 className="text-sm text-muted-foreground sm:pl-3">
+              A hand-drawn icon generated from SVG source
+            </h2>
+            <OpenInV0Button name="sketch-star" className="w-fit" />
+          </div>
+          <div className="flex items-center justify-center gap-6 min-h-[200px]">
+            <SketchStar className="size-8 text-primary" />
+            <SketchStar className="size-12 text-foreground" />
+            <SketchStar className="size-6 text-muted-foreground" />
+          </div>
+        </div>
+
         <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
           <div className="flex items-center justify-between">
             <h2 className="text-sm text-muted-foreground sm:pl-3">

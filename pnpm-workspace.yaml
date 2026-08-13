@@ -1,5 +1,6 @@
 allowBuilds:
   '@tailwindcss/oxide': true
+  core-js: true
   msw: true
   sharp: true
   unrs-resolver: true

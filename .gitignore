@@ -3,6 +3,7 @@
 # opencode (local agent tooling)
 /.opencode/
 /skills-lock.json
+/state.txt
 
 # dependencies
 /node_modules
