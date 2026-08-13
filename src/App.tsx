@@ -1,15 +1,12 @@
-import * as React from "react"
 import { OpenInV0Button } from "@/components/open-in-v0-button"
 import { HelloWorld } from "@/registry/new-york/blocks/hello-world/hello-world"
 import { ExampleForm } from "@/registry/new-york/blocks/example-form/example-form"
 import PokemonPage from "@/registry/new-york/blocks/complex-component/page"
 import { ExampleCard } from "@/registry/new-york/blocks/example-with-css/example-card"
-import { CubePreview } from "@/components/cube-preview"
+import { Cube } from "@/registry/scenes/cube/cube"
 import SketchStar from "@/registry/icons/SketchStar"
-// This page displays items from the custom registry.
-// You are free to implement this with your own design as needed.
 
-export default function Home() {
+export function App() {
   return (
     <div className="max-w-3xl mx-auto flex flex-col min-h-svh px-4 py-8 gap-8">
       <header className="flex flex-col gap-1">
@@ -19,7 +16,7 @@ export default function Home() {
         </p>
       </header>
       <main className="flex flex-col flex-1 gap-8">
-        <CubePreview />
+        <Cube />
         <div className="flex flex-col gap-4 border rounded-lg p-4">
           <div className="flex items-center justify-between">
             <h2 className="text-sm text-muted-foreground sm:pl-3">
